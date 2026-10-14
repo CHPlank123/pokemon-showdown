@@ -41,7 +41,10 @@ describe('Fork customs', () => {
 
 	it('groups sample-team randbats in their own selector section', () => {
 		const samples = Dex.formats.all().filter(format => format.section === 'Sample Team Randbats');
-		assert.deepEqual(samples.map(format => format.id), ['gen3ousampleteamrandbats', 'gen4ousampleteamrandbats']);
+		assert.deepEqual(samples.map(format => format.id), [
+			'gen3ousampleteamrandbats', 'gen4ousampleteamrandbats', 'gen3uublsampleteamrandbats',
+		]);
+		for (const format of samples) assert(format.tournamentShow, `${format.name}: tournaments`);
 		for (const format of samples) {
 			assert.equal(format.column, 1);
 			assert.equal(format.team, 'random');

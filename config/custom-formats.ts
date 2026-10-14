@@ -427,6 +427,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen4strb',
 		ruleset: ['[Gen 4] OU'],
 	},
+	{
+		name: "[Gen 3] UUBL Sample Team Randbats",
+		desc: "Randomly assigns one of the 15 current ADV UUBL sample teams, preserving its lead and sets.",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/adv-uubl.3652530/">ADV UUBL</a>`,
+		],
+		team: 'random',
+		mod: 'gen3uublstrb',
+		ruleset: ['[Gen 3] UUBL'],
+	},
 
 	// Yak Attack
 	///////////////////////////////////////////////////////////////////
