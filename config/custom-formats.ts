@@ -571,7 +571,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 3] ADV ES",
 		desc: "Gen 3 OU but every Pok&eacute;mon can learn and has to run Extreme Speed.",
 		mod: 'gen3es',
-		searchShow: false,
+		// surfnWOB fork: laddered on the side server (practice bots search gen3adves, 2026-10-21).
+		searchShow: true,
 		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod'],
 		banlist: ['Uber', 'Soundproof + Baton Pass', 'Smeargle + Ingrain', 'Sand Veil + Sand Stream', 'Assist', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Swagger', 'Quick Claw', 'Confuse Ray', 'Teeter Dance', 'Dynamic Punch', 'Sand-Attack', 'Focus Band', 'Flash', 'Mud Slap', 'Smokescreen', 'Kinesis', 'Agility + Baton Pass', 'Speed Boost + Baton Pass', 'Dragon Dance + Baton Pass', 'Silver Wind + Baton Pass', 'Ancientpower + Baton Pass'],
 		onValidateSet(set) {
