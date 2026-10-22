@@ -120,7 +120,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen3mega',
 		gameType: 'doubles',
 		ruleset: ['Standard', '!Switch Priority Clause Mod'],
-		banlist: ['Uber', 'Quick Claw', 'Soul Dew', 'Explosion', 'Self-Destruct', 'Swagger'],
+		// 'Absol-Mega-Z' by name: it left the AG tier for OU on 2026-10-22 (singles release only);
+		// the 'Uber' tag no longer covers it, so the doubles ban is kept explicitly.
+		banlist: ['Uber', 'Absol-Mega-Z', 'Quick Claw', 'Soul Dew', 'Explosion', 'Self-Destruct', 'Swagger'],
 		unbanlist: ['Wobbuffet', 'Wynaut'],
 	},
 	{
@@ -129,7 +131,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen3mega',
 		gameType: 'doubles',
 		ruleset: ['Standard', '!Switch Priority Clause Mod'],
-		banlist: ['AG', 'Quick Claw', 'Soul Dew', 'Swagger'],
+		// 'Absol-Mega-Z' by name: it left the AG tier for OU on 2026-10-22 (singles release only);
+		// the 'AG' tag no longer covers it, so the doubles ban is kept explicitly.
+		banlist: ['AG', 'Absol-Mega-Z', 'Quick Claw', 'Soul Dew', 'Swagger'],
 		unbanlist: ['Wobbuffet', 'Wynaut'],
 	},
 	{

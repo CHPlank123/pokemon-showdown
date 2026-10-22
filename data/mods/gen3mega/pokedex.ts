@@ -269,7 +269,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	absolmegaz: {
 		inherit: true,
 		gen: 3,
-		// Sharpness re-legalized (abilities.ts); AG-only while tours are ongoing.
+		// Sharpness re-legalized (abilities.ts); OU since 2026-10-22 (formats-data.ts).
 	},
 	glaliemega: {
 		inherit: true,
