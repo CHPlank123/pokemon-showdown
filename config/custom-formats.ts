@@ -558,6 +558,19 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 3] RNGless",
+		desc: "Gen 3 OU with selected random effects removed or reduced. Some randomness remains.",
+		mod: 'gen3rngless',
+		searchShow: false,
+		ruleset: ['Standard', 'One Boost Passer Clause', 'Accuracy Trap Clause', 'Freeze Clause Mod'],
+		banlist: [
+			'Uber', 'Soundproof + Baton Pass', 'Smeargle + Ingrain', 'Assist',
+			'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web',
+			'Agility + Baton Pass', 'Speed Boost + Baton Pass', 'Dragon Dance + Baton Pass',
+		],
+	},
+
+	{
 		name: "[Gen 3] ADV ES",
 		desc: "Gen 3 OU with mandatory Extreme Speed and reduced randomness: conditional critical hits, no full paralysis or confusion self-hits, and more reliable moves.",
 		mod: 'gen3es',
