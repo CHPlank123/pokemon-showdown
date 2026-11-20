@@ -5729,7 +5729,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 3] UU",
 		mod: 'gen3',
-		searchShow: false,
+		// surfnWOB fork: laddered on the side server (upstream ships this searchShow:false).
+		searchShow: true,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'OU', 'UUBL', 'Smeargle + Ingrain', 'Arena Trap', 'Baton Pass', 'Swagger'],
 	},
@@ -5804,7 +5805,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 3] ADV 200",
 		mod: 'gen3rs',
-		searchShow: false,
+		// surfnWOB fork: laddered on the side server (upstream ships this searchShow:false).
+		// Practice bots already search this format; without the flag every cycle pops
+		// "Your format gen3adv200 is not ladderable."
+		searchShow: true,
 		ruleset: ['Standard', 'One Boost Passer Clause'],
 		banlist: ['Uber', 'Swagger'],
 	},
