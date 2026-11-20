@@ -311,6 +311,49 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 3] ADV SU New",
+		desc: "ADV Sub-Zero Used, rebuilt from the Oct 2026 ADV ZU viability rankings (smogon.com/forums/posts/11160833). Pok&eacute;mon ranked B or higher there are ZU and banned; B-, C, and unranked Pok&eacute;mon are legal. All higher ADV tiers (PU and up, ZUBL) are banned.",
+		mod: 'gen3',
+		ruleset: ['Standard', 'Sleep Moves Clause', 'Baton Pass Stat Trap Clause'],
+		banlist: [
+			'Uber', 'OU', 'UUBL', 'UU', 'RUBL', 'RU', 'NUBL', 'NU', 'PUBL', 'PU', 'ZUBL',
+			// ADV ZU VR (post 11160833), B and above = ZU. Listed by species, not by the server's 'ZU' tag.
+			// S
+			'Mightyena', 'Seaking',
+			// A+
+			'Anorith', 'Delcatty', 'Gloom', 'Ponyta', 'Quilava',
+			// A
+			'Ariados', 'Doduo', 'Grovyle', 'Ivysaur', 'Koffing', 'Porygon', 'Snorunt', 'Tropius',
+			// A-
+			'Abra', 'Aipom', 'Beedrill', 'Castform', 'Corsola', 'Flaaffy', 'Meditite', 'Nosepass', 'Onix',
+			// B+
+			'Cubone', 'Noctowl', 'Volbeat',
+			// B
+			'Dustox', 'Elekid', 'Lileep', 'Voltorb', 'Wailmer',
+			// Unranked in the VR only because they were not in the previous metagame; moved INTO ADV ZU
+			// by the Aug 2026 shifts / ZUBL unban slate. Banned as ZU by Deniz's ruling (2026-10-12).
+			'Houndour', 'Magcargo', 'Omanyte', 'Poliwhirl', 'Shedinja', 'Yanma',
+			'Swagger', 'Baton Pass + Substitute',
+		],
+	},
+	{
+		name: "[Gen 3] LC UU",
+		desc: "Gen 3 Little Cup minus the LC OU pool: [Gen 3] LC rules with its 28 top threats also banned.",
+		mod: 'gen3',
+		searchShow: true,
+		ruleset: ['Standard', 'Little Cup', 'Pomeg Glitch Clause', 'Sleep Moves Clause', 'Accuracy Moves Clause'],
+		banlist: [
+			// [Gen 3] LC bans
+			'Abra', 'Chansey', 'Diglett', 'Meditite', 'Omanyte', 'Porygon', 'Scyther', 'Wynaut', 'Zigzagoon',
+			'Deep Sea Tooth', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Swagger', 'Thunder Wave',
+			// LC UU: LC OU species
+			'Wailmer', 'Elekid', 'Anorith', 'Gastly', 'Chinchou', 'Trapinch', 'Doduo',
+			'Voltorb', 'Snubbull', 'Ponyta', 'Bagon', 'Staryu', 'Cacnea', 'Houndour',
+			'Lileep', 'Exeggcute', 'Larvitar', 'Koffing', 'Spoink', 'Onix', 'Cubone',
+			'Magby', 'Magnemite', 'Horsea', 'Pineco', 'Duskull', 'Mankey', 'Meowth',
+		],
+	},
+	{
 		name: "[Gen 3] NFE",
 		desc: "Not Fully Evolved &mdash; only Pok&eacute;mon that can still evolve are allowed. Uses the ADV NU pool; the strongest NFEs (Chansey, Kadabra, Scyther, etc.) plus Deep Sea Tooth and Light Ball are banned.",
 		mod: 'gen3',
