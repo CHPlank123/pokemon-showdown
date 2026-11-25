@@ -4,6 +4,8 @@
 			"emitDeclarationOnly": true,
 			"outDir": "../dist",
 			"declaration": true,
+			"rootDir": "..",
+			"ignoreDeprecations": "6.0",
 			"target": "esnext",
 			"module": "commonjs",
 			"moduleResolution": "node",

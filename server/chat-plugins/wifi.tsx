@@ -261,9 +261,9 @@ abstract class Giveaway extends Rooms.SimpleRoomGame {
 				}
 			}
 		}
-		if (!spriteid.includes('-') && species.forme) { // for stuff like unown letters
-			spriteid += '-' + toID(species.forme);
-		}
+		if (!spriteid.includes('-') && species.forme && species.forme !== 'Delta') {
+	spriteid += '-' + toID(species.forme);
+}
 		const shiny = set.shiny ? '-shiny' : '';
 
 		const validFemale = [

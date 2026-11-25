@@ -5771,6 +5771,15 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Self-Destruct', 'Focus Band', 'King\'s Rock', 'Quick Claw',
 		],
 	},
+	
+{
+    name: "[Gen 3] Delta Species",
+    mod: 'gen3deltaspecies',
+    gameType: 'singles',
+    ruleset: ['Standard', "Sleep Moves Clause", "Baton Pass Stat Trap Clause", 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
+	banlist: ['Uber']
+},
+
 	{
 		name: "[Gen 3] UUBL",
 		mod: 'gen3',

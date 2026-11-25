@@ -292,8 +292,11 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 		this.cosmeticFormes = data.cosmeticFormes || undefined;
 		this.otherFormes = data.otherFormes || undefined;
 		this.formeOrder = data.formeOrder || undefined;
-		this.spriteid = data.spriteid ||
-			(toID(this.baseSpecies) + (this.baseSpecies !== this.name ? `-${toID(this.forme)}` : ''));
+		const generatedSpriteid = toID(this.baseSpecies) + (this.baseSpecies !== this.name ? `-${toID(this.forme)}` : '');
+		const explicitSpriteid = data.spriteid && toID(data.spriteid);
+		this.spriteid = explicitSpriteid === toID(this.baseSpecies) && this.baseSpecies !== this.name && this.forme
+			? generatedSpriteid
+			: (data.spriteid || generatedSpriteid);
 		this.abilities = data.abilities || { 0: "" };
 		this.types = data.types || ['???'];
 		this.addedType = data.addedType || undefined;
