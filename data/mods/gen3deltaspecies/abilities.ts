@@ -19,6 +19,7 @@ shadymove: {
 
 		const damage = this.damage(target.maxhp / 16, target, pokemon);
 		if (damage) {
+			this.add('-activate', pokemon, 'ability: Shady Move');
 			this.heal(damage, pokemon, pokemon);
 		}
 	},
@@ -178,5 +179,65 @@ dozing: {
 	},
 },
 
+shininghorn: {
+	name: "Shining Horn",
+	gen: 3,
+	rating: 2,
+	onTryHit(target, source, move) {
+		const holderSide = target.side.foe;
+		if (holderSide.pokemon.filter(ally => !ally.fainted).length !== 1) return;
+
+		const baseSpecies = target.species.baseSpecies;
+		const fossils = [
+			"Aerodactyl", "Omanyte", "Omastar", "Kabuto", "Kabutops",
+			"Lileep", "Cradily", "Anorith", "Armaldo",
+		];
+		if (fossils.includes(baseSpecies)) return;
+
+		// Only affect single-stage Pokémon and the first Pokémon in an evolution line.
+		if (this.dex.species.get(baseSpecies).prevo) return;
+if (this.dex.species.get(baseSpecies).prevo) {
+			this.add("-immune", target,'ability: Shining Horn');
+			return null;
+		}
+	},
+},
+solidshell: {
+	name: "Solid Shell",
+	gen: 3,
+	rating: 3,
+
+	onTryHit(target, source, move) {
+		if (!isDelta(target) || !move.spreadHit) return;
+
+		this.add('-immune', target, '[from] ability: Solid Shell');
+		return false;
+	},
+
+	onAllyTryHit(target, source, move) {
+		if (!isDelta(target) || !move.spreadHit) return;
+
+		this.add('-immune', target, '[from] ability: Solid Shell');
+		return false;
+	},
+},
+
+deltaspikes: {
+	name: "Delta Spikes",
+	gen: 3,
+	rating: 2,
+onImmunity(type) {
+	if (type === 'sandstorm') return false;
+},
+	onStart(pokemon) {
+		if (!this.field.isWeather('sandstorm')) return;
+
+	if (pokemon.side.foe.addSideCondition('spikes', pokemon, this.effect)) {
+			this.add('-sidestart', pokemon.side.foe, 'Spikes');
+			this.add('-activate', pokemon, 'ability: Delta Spikes');
+		}
+	}
+	
+}
 };
 

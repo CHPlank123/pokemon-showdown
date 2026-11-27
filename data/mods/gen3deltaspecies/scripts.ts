@@ -1,4 +1,3 @@
-
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen3',
 	gen: 3,
@@ -6,10 +5,20 @@ export const Scripts: ModdedBattleScriptsData = {
 	pokemon: {
 		inherit: true,
 
+		ignoringAbility() {
+			if (
+				this.volatiles['abilityimprison'] &&
+				!this.hasItem('Ability Shield') &&
+				!this.getAbility().flags['cantsuppress']
+			) {
+				return true;
+			}
+			return Object.getPrototypeOf(this).ignoringAbility.call(this);
+		},
+
 		getMoveRequestData() {
 			const request = Object.getPrototypeOf(this).getMoveRequestData.call(this);
 
-			// Don't bypass a move lock such as Encore or recharge.
 			if (!this.trapped || this.getLockedMove()) return request;
 			if (!this.hasType('Fire') && !this.hasType('Psychic')) return request;
 
@@ -29,7 +38,6 @@ export const Scripts: ModdedBattleScriptsData = {
 			const originalChooseSwitch = Object.getPrototypeOf(this).chooseSwitch;
 			const activePokemon = this.active[this.getChoiceIndex()];
 
-			// The regular client sends the selected team slot as a one-based number.
 			const slot = slotText && /^\d+$/.test(slotText) ? Number(slotText) - 1 : -1;
 			const replacement = this.pokemon[slot];
 
@@ -45,7 +53,6 @@ export const Scripts: ModdedBattleScriptsData = {
 				return originalChooseSwitch.call(this, slotText);
 			}
 
-			// Let the normal switch validation run, temporarily clearing the trap.
 			const wasTrapped = activePokemon.trapped;
 			activePokemon.trapped = false;
 			try {

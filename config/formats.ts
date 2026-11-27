@@ -5729,8 +5729,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 3] UU",
 		mod: 'gen3',
-		// surfnWOB fork: laddered on the side server (upstream ships this searchShow:false).
-		searchShow: true,
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'OU', 'UUBL', 'Smeargle + Ingrain', 'Arena Trap', 'Baton Pass', 'Swagger'],
 	},
@@ -5777,7 +5776,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
     mod: 'gen3deltaspecies',
     gameType: 'singles',
     ruleset: ['Standard', "Sleep Moves Clause", "Baton Pass Stat Trap Clause", 'Accuracy Trap Clause', 'Freeze Clause Mod', 'Speed Pass Clause'],
-	banlist: ['Uber']
+	banlist: ['Uber'],
+	unbanlist:['Mimikyu']
 },
 
 	{

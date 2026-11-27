@@ -171,7 +171,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		},
 		heightm: 1.7,
 		weightkg: 90.5,
-		color: "Red",
+		color: "Dark",
 		prevo: "Charmeleon",
 		evoLevel: 36,
 		eggGroups: [
@@ -1190,7 +1190,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 			spe: 70,
 		},
 		abilities: {
-			0: "Shell Armor",
+			0: "Solid Shell",
 		},
 		heightm: 1.5,
 		weightkg: 132.5,
@@ -2072,6 +2072,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 			M: 0.875,
 			F: 0.125,
 		},
+		changesFrom: "Snorlax",
 		baseStats: {
 			hp: 160,
 			atk: 110,
@@ -2087,7 +2088,6 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		heightm: 2.1,
 		weightkg: 460,
 		color: "Black",
-		prevo: "Munchlax",
 		evoType: "levelFriendship",
 		eggGroups: [
 			"Monster",
@@ -3363,7 +3363,7 @@ export const Pokedex: { [k: string]: AnyObject } = {
 		baseSpecies: "Heracross",
 		forme: "Delta",
 		types: [
-			"Fire",
+			"Fire", "Bug"
 		],
 		spriteid: "heracross",
 		baseStats: {
@@ -3375,8 +3375,8 @@ export const Pokedex: { [k: string]: AnyObject } = {
 			spe: 85,
 		},
 		abilities: {
-			0: "Swarm",
-			1: "Guts",
+			0: "Shining Horn",
+		
 		},
 		heightm: 1.5,
 		weightkg: 54,
@@ -4458,8 +4458,8 @@ export const Pokedex: { [k: string]: AnyObject } = {
 			spe: 55,
 		},
 		abilities: {
-			0: "Sand Veil",
-			1: "Water Absorb",
+			0: "Delta Spikes",
+			
 		},
 		heightm: 1.3,
 		weightkg: 77.4,

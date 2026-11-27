@@ -1,3 +1,5 @@
+import { restart } from '../../../server/modlog';
+
 export const Learnsets: import('../../../sim/dex-species').LearnsetDataTable = {
 	missingno: {
 		learnset: {
@@ -380,9 +382,9 @@ export const Learnsets: import('../../../sim/dex-species').LearnsetDataTable = {
 	},
 	charizarddeltadark: {
 		learnset: {
-		darkswirl: ["3L"],
-		firedance: ["3L"],
-		rotatingclaws: ["3L"],
+		darkswirl: ["3L50"],
+		firedance: ["3E"],
+		rotatingclaws: ["3L45"],
 			
 	}, },
 	squirtle: {
@@ -6083,7 +6085,7 @@ export const Learnsets: import('../../../sim/dex-species').LearnsetDataTable = {
 	},
 	marowakdelta: {
 		learnset: {
-			metalcrusher: ["3L"],
+			metalcrusher: ["3L45"],
 			}, },
 	tyrogue: {
 		learnset: {
@@ -8747,6 +8749,13 @@ export const Learnsets: import('../../../sim/dex-species').LearnsetDataTable = {
 		eventData: [
 			{generation: 3, level: 43, moves: ["refresh", "fissure", "curse", "bodyslam"]},
 		],
+	},
+	snorlaxdelta: {
+		learnset: {
+			rest: ["3M"],
+			snore: ["3T"],
+			sleeppowder: ["3E"],
+		},
 	},
 	articuno: {
 		learnset: {
